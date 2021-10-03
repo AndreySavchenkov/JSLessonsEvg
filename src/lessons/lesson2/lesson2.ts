@@ -20,6 +20,45 @@ console.log('lesson 2');
 // https://learn.javascript.ru/recursion
 // https://www.youtube.com/watch?v=Kuq6oIN3PH0
 
+//function, conditions, switch, loops, ananimus code, try/catch/finally
+
+let globalScope = {
+    outerScope: null,
+    f: 'Function',
+    c: 50,
+    a: 10,
+    func: 'Function',
+}
+let a = 10;
+
+function f(arg: any) {
+
+    let fScope = {
+        outerScope: globalScope,
+        arg: undefined,
+        innerA: undefined,
+    }
+
+    var innerA = 50;
+    console.log(a);
+    a = innerA;
+    console.log(arg);
+
+    function f1 () {
+        let f1Scope = {
+            outerScope: fScope,
+        }
+        console.log(arg);
+        arg += 1000
+        return arg;
+    }
+
+    return f1;
+}
+var c = 50;
+let funck = f(c);
+funck()
+console.log(a);
 
 // Task 01
 // Реализовать функцию sum которая суммирует 2 числа следующим образом sum(3)(6) === 9

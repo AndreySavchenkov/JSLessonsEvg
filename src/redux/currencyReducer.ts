@@ -6,6 +6,7 @@ export type CurrencyType = {
     buyRate: number;
     sellRate: number;
 };
+
 export type CurrencyState = {
     currencies: Array<CurrencyType>;
     currentCurrency: string;
@@ -39,21 +40,11 @@ const initialState: CurrencyState = {
 };
 
 export const currencyReducer = (state: CurrencyState = initialState, action: CurrencyReducersTypes): CurrencyState => {
-    // @ts-ignore
+
     switch (action.type) {
         case ACTIONS_TYPE.CHANGE_CURRENCY_FIELD_TYPE:
-            return {
-                ...state,
-                ...action.payload,
-            }
+            return {...state, ...action.payload,}
         case ACTIONS_TYPE.CHANGE_CHANGE_ACTION:
-            return{
-                ...state,
-                ...action.payload,
-                amountOfBYN: '',
-                amountOfCurrency: '',
-            }
-
         case ACTIONS_TYPE.CHANGE_CURRENT_CURRENCY:
             return {
                 ...state,
@@ -61,8 +52,8 @@ export const currencyReducer = (state: CurrencyState = initialState, action: Cur
                 amountOfBYN: '',
                 amountOfCurrency: '',
             }
-
         default:
             return state;
     }
+
 };

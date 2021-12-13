@@ -89,6 +89,16 @@ console.log((sum(3)(6)));
 // counter2(); // 1
 // counter(); // 3
 
+const makeCounter = () => {
+    let sum: number
+    return () => {
+        sum += 1
+    }
+}
+const counter = makeCounter()
+
+console.log(counter());
+
 // Task 03
 // Переписать функцию из Task 02 так, что бы она принимала число в качестве аргумента и это число было стартовым значением счетчика
 // и возвращала следующий объект методов:
@@ -116,7 +126,7 @@ function superSum(num: number) {
     function helper(...args: number[]) {
         _arguments = [..._arguments,...args];
         if(_arguments.length >= num) {
-            _arguments.length = 3;
+            _arguments.length = num;
             return _arguments.reduce((acc, elm) => acc + elm);
         } else {
             return helper

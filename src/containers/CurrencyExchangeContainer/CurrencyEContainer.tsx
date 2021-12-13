@@ -27,6 +27,7 @@ const CurrencyEContainer: React.FC = () => {
 
 
     let currencyRate: number = 0;
+
     const currenciesName = currencies.map((currency: CurrencyType) => {
         if (currency.currencyName === currentCurrency) {
             currencyRate = isBuying ? currency.buyRate : currency.sellRate;
@@ -65,7 +66,7 @@ const CurrencyEContainer: React.FC = () => {
     };
 
     return (
-        <React.Fragment>
+        <>
             <CurrencyExchange
                 currenciesName={currenciesName}
                 currentCurrency={currentCurrency}
@@ -77,7 +78,7 @@ const CurrencyEContainer: React.FC = () => {
                 changeAction={changeAction}
                 changeCurrentCurrency={changeCurrentCurrency}
             />
-        </React.Fragment>
+        </>
     );
 };
 

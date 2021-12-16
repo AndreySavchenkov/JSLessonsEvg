@@ -46,28 +46,45 @@
 //     })
 
 
-let pr = new Promise((resolve, reject) => {
-    //some async code
-    // resolve(1);
-    reject(0);
-    // resolve({name: 'Vasya', value: 1})
+// let pr = new Promise((resolve, reject) => {
+//     //some async code
+//     // resolve(1);
+//     reject(0);
+//     // resolve({name: 'Vasya', value: 1})
+//
+// })
+//
+// pr
+//     .then(res => {
+//         console.log('Then res', res);
+//         return 10;
+//     })
+//     .then(res2 => {
+//         console.log('Then res2', res2);
+//     })
+//     .catch(err => {
+//         console.log('Then err', err);
+//     })
 
-})
-
-pr
-    .then(res => {
-        console.log('Then res', res);
-        return 10;
-    })
-    .then(res2 => {
-        console.log('Then res2', res2);
-    })
-    .catch(err => {
-        console.log('Then err', err);
-    })
 
 
-
+// async function f() { //let f = async() => {}
+//     try{
+//         // let a = 10;
+//         // console.log(a);
+//         // const response = await somePromise;
+//         const response = await Promise.resolve(1000);
+//         // throw 50;
+//         // return a + a
+//         return response
+//     } catch (e) {
+//         return e
+//     }
+// }
+//
+// console.log('start');
+// f().then(console.log)
+// console.log('end');
 
 //
 

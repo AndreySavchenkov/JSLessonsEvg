@@ -1,5 +1,6 @@
 console.log('Lesson 7');
 
+
 // __Proto__
 // https://learn.javascript.ru/prototype-inheritance
 // https://habr.com/ru/post/518360/
@@ -12,6 +13,8 @@ console.log('Lesson 7');
 
 // https://www.youtube.com/watch?v=aQkgUUmUJy4&t=21s
 // https://www.youtube.com/watch?v=b55hiUlhAzI
+
+
 
 
 //Task 01
